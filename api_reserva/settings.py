@@ -91,6 +91,8 @@ DATABASES = {
         conn_max_age=600
     )
 }
+DB_CONNECTION = os.getenv('DB_CONNECTION')
+DATABASES["default"] = dj_database_url.parse(DB_CONNECTION)
 
 
 # Password validation
