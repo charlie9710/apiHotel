@@ -87,12 +87,10 @@ WSGI_APPLICATION = 'api_reserva.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',        
+        default='sqlite:///db.sqlite3',
         conn_max_age=600
     )
 }
-DB_CONNECTION = os.getenv('DB_CONNECTION')
-DATABASES["default"] = dj_database_url.parse(DB_CONNECTION)
 
 
 # Password validation
